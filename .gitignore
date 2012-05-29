@@ -8,3 +8,8 @@ nbproject/private/
 *.DS_Store
 *.swp
 *.out
+
+#eclipse
+.project
+.buildpath
+.settings/
