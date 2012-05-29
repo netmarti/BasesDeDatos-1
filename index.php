@@ -10,9 +10,11 @@
 	</br>
 	<a href="resultados/listar_resultados.php">Resultados</a>
 	</br>
-	<a href="auspiciadores/listar_auspiciadores.php">Auspiciadores</a>
+	<a href="auspiciadores/listar.php">Auspiciadores</a>
 	</br>
 	<a href="participantes/listar_participantes.php">Participantes</a>
+	<br />
+	<a href="productos/listar.php">Productos</a>
 
 
 <body>

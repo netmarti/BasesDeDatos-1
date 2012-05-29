@@ -2,7 +2,7 @@
 	
 	//Revisamos que exista un id como parametro
 	if(!isset($_GET['modelo'])){
-		echo "No ha especificado un evento";
+		echo "No ha especificado un producto";
 	}
 	else {
 		
@@ -36,7 +36,7 @@
 
 <html>
 	<h1>Editar Producto</h1>
-	<p>Indique los nuevos datos del evento:</p>
+	<p>Indique los nuevos datos del producto:</p>
 	
 	<form method='post' action='editar_data.php'>
 		<input type="hidden" name="id_producto" value="<?php echo $modelo ?>" />
