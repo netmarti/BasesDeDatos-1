@@ -37,11 +37,12 @@
 				<td><?php echo $producto['nombre'] ?></td>
 				<td><?php echo $producto['modelo'] ?></td>
 				<td><a href="editar.php?modelo=<?php echo $producto['modelo']?>">Editar</a><br>
-					<a href="eliminar_data.php?modelo=<?php echo $producto['modelo']?>">Eliminar</a></td>
+					<a href="eliminar_data.php?modelo=<?php echo $producto['modelo']?>">Eliminar</a>
+				</td>
 			</tr>
 			<?php } ?>
 		</table>
-
+		<br />
 		<p><a href='crear.php'>Ingresar nuevo producto</a></p>
 	<body>
 </html>
