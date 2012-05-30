@@ -19,7 +19,7 @@ foreach ($db->query($sql) as $tienda)
 <body>
 	<table>
 		<tr>
-			<th>Nombre</th>
+			<th>Nombres</th>
 			<th>Calle</th>
 			<th>Ciudad</th>
 			<th>Pais</th>
@@ -30,11 +30,16 @@ foreach ($db->query($sql) as $tienda)
 			<td><?php echo $tienda['calle'] ?></td>
 			<td><?php echo $tienda['ciudad'] ?></td>
 			<td><?php echo $tienda['pais'] ?></td>
+			<td><a
+				href="editar.php?pais=<?php echo $tienda['pais']?>&ciudad=<?php echo $tienda['ciudad']?>&calle=<?php echo $tienda['calle']?>">Editar</a>
+				<br /> <a
+				href="eliminar_data.php?pais=<?php echo $tienda['pais']?>&ciudad=<?php echo $tienda['ciudad']?>&calle=<?php echo $tienda['calle']?>"">Eliminar</a>
+			</td>
 		</tr>
 		<?php } ?>
 	</table>
 	<br />
-
+	<a href="crear.php">Crear una nueva tienda</a>
 
 <body>
 

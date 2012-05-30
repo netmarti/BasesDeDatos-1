@@ -6,7 +6,7 @@
 	<h1>Buena buena!</h1>
 	<a href="eventos/listar.php">Eventos</a>
 	<br />
-	<a href="tiendas/listar_tiendas.php">Tiendas</a>
+	<a href="tiendas/listar.php">Tiendas</a>
 	<br />
 	<a href="resultados/listar_resultados.php">Resultados</a>
 	<br />
