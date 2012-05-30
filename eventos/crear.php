@@ -13,6 +13,7 @@
 
 
 <form method='post' action='crear_data.php'>
+	<h3>Datos del evento:</h3>
 	<p>
 		Nombre: <input type="text" name="nombre" />
 	</p>
@@ -30,6 +31,16 @@
 	</p>
 	<p>
 		Calle: <input type="text" name="calle" />
+	</p>
+	<h3>Precios por categoria:</h3>
+	<p>
+		Juvenil: <input type="text" name="precio_juvenil" />
+	</p>
+	<p>
+		Adulto: <input type="text" name="precio_adulto" />
+	</p>
+	<p>
+		Senior: <input type="text" name="precio_senior" />
 	</p>
 	<p>
 		<input type="submit" value="Enviar">

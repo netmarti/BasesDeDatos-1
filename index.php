@@ -13,6 +13,8 @@
 	<a href="auspiciadores/listar_auspiciadores.php">Auspiciadores</a>
 	</br>
 	<a href="participantes/listar.php">Participantes</a>
+	</br>
+	<a href="inscripciones/listar.php">Inscripciones</a>
 
 <body>
 

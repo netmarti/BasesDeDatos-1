@@ -13,14 +13,41 @@ if(!isset($_GET['fecha']) ||!isset($_GET['pais']) || !isset($_GET['ciudad']) || 
 	$pais = $_GET['pais'];
 	$ciudad = $_GET['ciudad'];
 	$calle = $_GET['calle'];
-	$sql = "SELECT * FROM evento WHERE fecha = '$fecha' AND pais = '$pais' AND ciudad = '$ciudad' AND calle = '$calle';";
-
+	
+	$sql_evento = "SELECT * FROM evento WHERE fecha = '$fecha' AND pais = '$pais' AND ciudad = '$ciudad' AND calle = '$calle';";
+	$sql_precio_juvenil = "SELECT * FROM precio_inscripcion WHERE fecha_evento = '$fecha' AND pais = '$pais' AND ciudad = '$ciudad' AND calle = '$calle' AND categoria_participante = 'juvenil';";
+	$sql_precio_adulto = "SELECT * FROM precio_inscripcion WHERE fecha_evento = '$fecha' AND pais = '$pais' AND ciudad = '$ciudad' AND calle = '$calle' AND categoria_participante = 'adulto';";
+	$sql_precio_senior = "SELECT * FROM precio_inscripcion WHERE fecha_evento = '$fecha' AND pais = '$pais' AND ciudad = '$ciudad' AND calle = '$calle' AND categoria_participante = 'senior';";
 	//Extraemos los datos
-	foreach ($db->query($sql) as $row){
+	
+	//die($sql_precio_juvenil);
+	foreach ($db->query($sql_evento) as $row){
 
 		$evento = $row;
 
 	}
+	
+	//Extraemos los datos
+	foreach ($db->query($sql_precio_juvenil) as $row){
+	
+		$precio_juvenil = $row['precio'];
+	
+	}
+	
+	//Extraemos los datos
+	foreach ($db->query($sql_precio_adulto) as $row){
+	
+		$precio_adulto = $row['precio'];
+	
+	}
+	
+	//Extraemos los datos
+	foreach ($db->query($sql_precio_senior) as $row){
+	
+		$precio_senior = $row['precio'];
+	
+	}
+	
 
 	//Nos desconectamos de la base de datos
 	$db = null;
@@ -47,6 +74,7 @@ if(!isset($_GET['fecha']) ||!isset($_GET['pais']) || !isset($_GET['ciudad']) || 
 
 <form method='post' action='editar_data.php'>
 	<input type="hidden" name="id_fabricante" value="<?php echo $fecha ?>" />
+	<h3>Datos del evento:</h3>
 	<p>
 		Nombre: <input type="text" name="nombre"
 			value="<?php echo $evento['nombre']?>" />
@@ -74,6 +102,19 @@ if(!isset($_GET['fecha']) ||!isset($_GET['pais']) || !isset($_GET['ciudad']) || 
 	<p>
 		Calle: <input type="text" name="calle"
 			value="<?php echo $evento['calle']?>" />
+	</p>
+	<h3>Precios por categoria:</h3>
+	<p>
+		Juvenil: <input type="text" name="precio_juvenil"
+			value="<?php echo $precio_juvenil?>" />
+	</p>
+	<p>
+		Adulto: <input type="text" name="precio_adulto"
+			value="<?php echo $precio_adulto?>" />
+	</p>
+	<p>
+		Senior: <input type="text" name="precio_senior"
+			value="<?php echo $precio_senior?>" />
 	</p>
 	<p>
 		<input type="submit" value="Enviar">
