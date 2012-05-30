@@ -5,16 +5,18 @@
 <body>
 	<h1>Buena buena!</h1>
 	<a href="eventos/listar.php">Eventos</a>
-	</br>
+	<br />
 	<a href="tiendas/listar_tiendas.php">Tiendas</a>
-	</br>
+	<br />
 	<a href="resultados/listar_resultados.php">Resultados</a>
-	</br>
-	<a href="auspiciadores/listar_auspiciadores.php">Auspiciadores</a>
-	</br>
+	<br />
+	<a href="auspiciadores/listar.php">Auspiciadores</a>
+	<br />
 	<a href="participantes/listar.php">Participantes</a>
-	</br>
+	<br />
 	<a href="inscripciones/listar.php">Inscripciones</a>
+	<br />
+	<a href="productos/listar.php">Productos</a>
 
 <body>
 
