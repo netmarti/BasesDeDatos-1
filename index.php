@@ -17,6 +17,8 @@
 	<a href="inscripciones/listar.php">Inscripciones</a>
 	<br />
 	<a href="productos/listar.php">Productos</a>
+	<br />
+	<a href="ofrece/listar.php">Productos ofrecidos por tienda</a>
 
 <body>
 
