@@ -65,9 +65,12 @@ if(!isset($_GET['rut_participante']) || !isset($_GET['nacionalidad']) || !isset(
 		Fecha Inscripcion: <input type="text" name="fecha_inscripcion"
 			value="<?php echo $inscripcion['fecha_inscripcion']?>" />
 	</p>
-	<p>
-		Categoria: <input type="text" name="categoria_participante"
-			value="<?php echo $inscripcion['categoria_participante']?>" />
+	<p>Categoria: 
+			<select name="categoria_participante">
+				<option value="juvenil">Juvenil</option>
+				<option value="adulto">Adulto</option>
+				<option value="senior">Senior</option>				
+			</select>
 	</p>
 	<p>
 		Fecha Evento: <input type="text" name="fecha_evento"
