@@ -8,7 +8,7 @@
 	<br />
 	<a href="tiendas/listar.php">Tiendas</a>
 	<br />
-	<a href="resultados/listar_resultados.php">Resultados</a>
+	<a href="resultados/listar.php">Resultados</a>
 	<br />
 	<a href="auspiciadores/listar.php">Auspiciadores</a>
 	<br />

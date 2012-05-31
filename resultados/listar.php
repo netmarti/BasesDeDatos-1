@@ -24,9 +24,11 @@
 	</head>
 	
 	<body>
+		<h1>Lista de todos los resultados</h1>
 		<table border = '1' cellpadding= '15'>
 			<tr>
 				<th>Posicion</th>
+				<th>Tiempo</th>
 				<th>Rut participante</th>
 				<th>Fecha evento</th>
 			</tr>
@@ -34,6 +36,7 @@
 				?>
 			<tr>
 				<td><?php echo $resultado['posicion'] ?></td>
+				<td><?php echo $resultado['horas']?>:<?php echo $resultado['minutos']?>:<?php echo $resultado['segundos']?></td>
 				<td><?php echo $resultado['rut_participante'] ?></td>
 				<td><?php echo $resultado['fecha_evento'] ?></td>
 				<td>
@@ -42,7 +45,13 @@
 											&fecha_evento=<?php echo $resultado['fecha_evento']?>
 											&pais=<?php echo $resultado['pais']?>
 											&ciudad=<?php echo $resultado['ciudad']?>
-											&calle=<?php echo $resultado['calle']?>">Eliminar</a>
+											&calle=<?php echo $resultado['calle']?>">Eliminar</a><br />
+					<a href="editar.php?rut_participante=<?php echo $resultado['rut_participante']?>
+											&nacionalidad_participante=<?php echo $resultado['nacionalidad_participante']?>
+											&fecha_evento=<?php echo $resultado['fecha_evento']?>
+											&pais=<?php echo $resultado['pais']?>
+											&ciudad=<?php echo $resultado['ciudad']?>
+											&calle=<?php echo $resultado['calle']?>">Editar</a>
 				</td>
 			</tr>
 			<?php } ?> 
