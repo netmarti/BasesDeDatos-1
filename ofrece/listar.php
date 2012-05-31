@@ -40,12 +40,16 @@
 				<td><?php echo $oferta['stock'] ?></td>
 				<td><?php echo $oferta['precio'] ?></td>
 				<td><a
-				href="editar.php?modelo=<?php echo $oferta['modelo']?>&pais=<?php echo $oferta['pais']?>&ciudad=<?php echo $oferta['ciudad']?>&
-													calle=<?php echo $oferta['calle']?>">Editar</a>
+				href="editar.php?modelo=<?php echo $oferta['modelo']?>&
+										pais=<?php echo $oferta['pais']?>&
+										ciudad=<?php echo $oferta['ciudad']?>&
+										calle=<?php echo $oferta['calle']?>">Editar</a>
 				<br /> 
 				<a
-				href="eliminar_data.php?modelo=<?php echo $oferta['modelo']?>&pais=<?php echo $oferta['pais']?>&ciudad=<?php echo $oferta['ciudad']?>&
-													calle=<?php echo $oferta['calle']?>">Eliminar</a>
+				href="eliminar_data.php?modelo=<?php echo $oferta['modelo']?>&
+											pais=<?php echo $oferta['pais']?>&
+											ciudad=<?php echo $oferta['ciudad']?>&
+											calle=<?php echo $oferta['calle']?>">Eliminar</a>
 				</td>
 			</tr>
 			<?php } ?>
