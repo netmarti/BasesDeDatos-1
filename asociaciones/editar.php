@@ -40,6 +40,11 @@ if(!isset($_GET['nombre_auspiciador']) || !isset($_GET['fecha_evento']) || !isse
 <!-- Formulario que edita a un evento -->
 
 <html>
+<head>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+</head>
+<body>
+<?php include "../navbar.php"?>
 
 <h1>Editar Asociacion</h1>
 
@@ -49,7 +54,7 @@ if(!isset($_GET['nombre_auspiciador']) || !isset($_GET['fecha_evento']) || !isse
 <p>
 
 
-<form method='post' action='editar_data.php'>
+<form class="well" method='post' action='editar_data.php'>
 	<input type="hidden" name="fecha_evento" value="<?php echo $fecha_evento ?>" />
 	<input type="hidden" name="pais" value="<?php echo $pais ?>" />
 	<input type="hidden" name="ciudad" value="<?php echo $ciudad ?>" />
@@ -79,7 +84,7 @@ if(!isset($_GET['nombre_auspiciador']) || !isset($_GET['fecha_evento']) || !isse
 		<input type="submit" value="Enviar">
 	</p>
 </form>
-
+</body>
 </html>
 <?php
 	

@@ -48,13 +48,15 @@
 		
 <html>
 	<head>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 		<title>Editando compras</title>
 	</head>
+	<?php include "../navbar.php"?>
 	
 	<h1>Editar Compra</h1>
 	<p>Indique los nuevos datos de la compra:</p>
 	
-	<form method="post" action="editar_data.php">
+	<form class="well" method="post" action="editar_data.php">
 		<p>
 			Comprador: <?php echo $rut?> <?php echo $nacionalidad?>
 			<input type="hidden" name="rut" value="<?php echo $rut ?>" />

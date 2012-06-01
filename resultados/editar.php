@@ -45,13 +45,14 @@
 		
 <html>
 	<head>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 		<title>Editando resultados</title>
 	</head>
 	
 	<h1>Editar Resultado</h1>
 	<p>Indique los nuevos datos del resultado:</p>
 	
-	<form method="post" action="editar_data.php">
+	<form class="well" method="post" action="editar_data.php">
 		<input type="hidden" name="rut_participante" value="<?php echo $rut ?>" />
 		<input type="hidden" name="nacionalidad_participante" value="<?php echo $nacionalidad ?>" />
 		<input type="hidden" name="fecha_evento" value="<?php echo $fecha ?>" />

@@ -33,14 +33,18 @@
 
 <!-- Formulario que crea una inscripcion nueva-->
 <html>
-	
-	<title>Creando una asociacion</title>
-	
+	<head>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+		<title>Creando una asociacion</title>
+	</head>
+	<body>
+	<?php include "../navbar.php"?>
+
 	<h1>Crear asociacion</h1>
 
 	<p>Ingrese los datos de la nueva asociacion</p>
 	
-	<form method='post' action="crear_data.php">
+	<form class="well" method='post' action="crear_data.php">
 	<h3>Datos:</h3>
 		<p> Auspiciador: 
 			<select name="auspiciador">
@@ -83,4 +87,5 @@
 		<input type="submit" value="Crear" />
 		
 	</form>
+	</body>
 </html>

@@ -38,7 +38,9 @@ if(!isset($_GET['pais']) || !isset($_GET['ciudad']) || !isset($_GET['calle'])){
 <!-- Formulario que edita una tienda -->
 
 <html>
-
+<head>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+</head>
 <h1>Editar Tienda</h1>
 
 <p>Indique los nuevos datos de la tienda:
@@ -47,7 +49,7 @@ if(!isset($_GET['pais']) || !isset($_GET['ciudad']) || !isset($_GET['calle'])){
 <p>
 
 
-<form method='post' action='editar_data.php'>
+<form class="well" method='post' action='editar_data.php'>
 	<input type="hidden" name="id_fabricante" value="<?php echo $calle ?>" />
 	<h3>Datos del evento:</h3>
 	<p>

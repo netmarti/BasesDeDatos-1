@@ -16,21 +16,27 @@
 
 <html>
 	<head>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 		<title>
 			Productos
 		</title>
 	</head>
 
 	<body>
+	<?php include "../navbar.php"?>
+	<div class="container">
 		<h1>Lista de todos los productos</h1>
 
 
-		<table border = '1' cellpadding= '15'>
+		<table class="table">
+			<thead>
 			<tr>
 				<th>Descripcion</th>
 				<th>Nombre</th>
 				<th>Modelo</th>
 			</tr>
+			</thead>
+			<tbody>
 			<?php foreach($productos as $producto){ ?>
 			<tr>
 				<td><?php echo $producto['descripcion'] ?></td>
@@ -41,8 +47,10 @@
 				</td>
 			</tr>
 			<?php } ?>
+			</tbody>
 		</table>
 		<br />
 		<p><a href='crear.php'>Ingresar nuevo producto</a></p>
+	</div>
 	<body>
 </html>

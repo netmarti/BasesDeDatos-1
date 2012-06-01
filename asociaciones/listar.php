@@ -14,12 +14,15 @@ foreach ($db->query($sql) as $asociacion)
 
 <html>
 <head>
-
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <body>
-	<h1>Asociacioes</h1>
+<?php include "../navbar.php"?>
+<div class="container">
+	<h1>Asociaciones</h1>
 	<p>Listado de las asociaciones existentes hasta la fecha:</p>
-	<table>
+	<table class="table">
+		<thead>
 		<tr>
 			<th>Fecha Evento</th>
 			<th>Pais</th>
@@ -28,6 +31,8 @@ foreach ($db->query($sql) as $asociacion)
 			<th>Nombre auspiciador</th>
 			<th>Monto</th>
 		</tr>
+		</thead>
+		<tbody>
 		<?php foreach($asociaciones as $asociacion){ ?>
 		<tr>
 			<td><?php echo $asociacion['fecha_evento'] ?></td>
@@ -44,11 +49,12 @@ foreach ($db->query($sql) as $asociacion)
 			</td>
 		</tr>
 		<?php } ?>
+		</tbody>
 	</table>
 	<br />
 	<a href="crear.php">Crear una nueva asociacion</a>
 
-
+</div>
 <body>
 
 </html>

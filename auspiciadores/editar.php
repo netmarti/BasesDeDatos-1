@@ -35,10 +35,15 @@
 <!-- Formulario que edita un auspiciador-->
 
 <html>
+<head>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">	
+</head>
+<body>
+<?php include "../navbar.php"?>
 	<h1>Editar Auspiciador</h1>
 	<p>Indique los nuevos datos del Auspiciador:</p>
 	
-	<form method='post' action='editar_data.php'>
+	<form class="well" method='post' action='editar_data.php'>
 		<input type="hidden" name="id_auspiciador" value="<?php echo $nombre ?>" />
 		<p>
 			Nombre: <input type="text" name="nombre"
@@ -52,7 +57,7 @@
 			<input type="submit" value="Editar" />
 		</p>
 	</form>
-	
+</body>
 </html>
 
 <?php
