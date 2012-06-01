@@ -1,13 +1,18 @@
 Las siguientes son las instrucciones para que la pagina quede funcionando correctamente
 
-1) Crear la base de datos a partir del archivo schema.sql
+1) Crear la base de datos con el nombre que se desee
 
-2) Crear las vistas a partir de vistas.sql
+2) Crear las tablas a partir del archivo schema.sql
 
-3) Crear los procedimientos almacenados a partir de procedimientos.sql
+3) Crear las vistas a partir de vistas.sql
 
-4) Poblar la base utilizando data_14.sql
+4) Crear los procedimientos almacenados a partir de procedimientos.sql
+
+5) Poblar las tablas utilizando data_14.sql
 
 Por ultimo colocar el archivo BasesDeDatos en el localhost del computador.
-Ese archivo es el rut el proyecto y además contiene todo lo necesario para el funcionamiento
-de la pagina
+Ese archivo es el root el proyecto y además contiene todo lo necesario para el funcionamiento
+de la pagina.
+
+//IMPORTANTE// En el archivo BasesDeDatos se encuentra el archivo db_connect.php. Hay que editar esa conexion
+a la base de datos poniendo el nombre de usuario que se vaya a utilizar y el nombre de la base creada. 
