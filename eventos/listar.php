@@ -80,6 +80,6 @@ foreach ($db->query($sql) as $evento)
 
 
 </div>
-<body>
+</body>
 
 </html>

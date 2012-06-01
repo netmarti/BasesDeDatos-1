@@ -41,6 +41,7 @@ if(!isset($_GET['pais']) || !isset($_GET['ciudad']) || !isset($_GET['calle'])){
 <head>
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
+<div class="container">
 <h1>Editar Tienda</h1>
 
 <p>Indique los nuevos datos de la tienda:
@@ -72,7 +73,7 @@ if(!isset($_GET['pais']) || !isset($_GET['ciudad']) || !isset($_GET['calle'])){
 		<input type="submit" value="Enviar">
 	</p>
 </form>
-
+</div>
 </html>
 <?php
 	

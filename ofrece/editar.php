@@ -45,6 +45,7 @@
 		<title>Editando una oferta</title>
 	</head>
 	<?php include "../navbar.php"?>
+	<div class="container">
 	<h1>Editar Oferta</h1>
 	<p>Indique los nuevos datos de la oferta:</p>
 	
@@ -66,6 +67,7 @@
 		</p>
 		
 	</form>
+	<div class="container">
 </html>	
 		
 			

@@ -45,6 +45,7 @@ if(!isset($_GET['rut_participante']) || !isset($_GET['nacionalidad']) || !isset(
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <?php include "../navbar.php"?>
+<div class="container">
 <h1>Editar Inscripcion</h1>
 
 <p>Indique los nuevos datos de la inscripcion:
@@ -95,7 +96,7 @@ if(!isset($_GET['rut_participante']) || !isset($_GET['nacionalidad']) || !isset(
 		<input type="submit" value="Enviar">
 	</p>
 </form>
-
+</div>
 </html>
 <?php
 	

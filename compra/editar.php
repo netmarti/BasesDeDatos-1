@@ -52,7 +52,7 @@
 		<title>Editando compras</title>
 	</head>
 	<?php include "../navbar.php"?>
-	
+	<div class="container">
 	<h1>Editar Compra</h1>
 	<p>Indique los nuevos datos de la compra:</p>
 	
@@ -84,6 +84,7 @@
 		</p>
 		
 	</form>
+	</div>
 </html>	
 				
 <?php	

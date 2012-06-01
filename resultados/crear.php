@@ -37,6 +37,8 @@
 		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 		<title>Creando un resultado</title>
 	</head>
+	<?php include "../navbar.php"?>
+	<div class="container">
 	<h1>Crear resultado</h1>
 	
 	<p>Ingrese los datos del nuevo resultado</p>
@@ -85,6 +87,6 @@
 		</p>
 		
 		<input type="submit" value="Crear" />
-		
 	</form>
+	</div>
 </html>

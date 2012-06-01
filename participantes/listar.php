@@ -19,6 +19,8 @@ foreach ($db->query($sql) as $participante)
 <body>
 <?php include "../navbar.php"?>
 <div class="container">
+	<h1>Participantes</h1>
+	<p>Listado de los participantes registrados hasta la fecha:</p>
 	<table class="table">
 		<thead>
 		<tr>
@@ -39,7 +41,7 @@ foreach ($db->query($sql) as $participante)
 			<td><?php echo $participante['nacionalidad'] ?></td>
 			<td><a
 				href="editar.php?rut=<?php echo $participante['rut']?>&nacionalidad=<?php echo $participante['nacionalidad']?>">Editar</a>
-				</br> <a
+				<br /> <a
 				href="eliminar_data.php?rut=<?php echo $participante['rut']?>&nacionalidad=<?php echo $participante['nacionalidad']?>">Eliminar</a>
 			</td>
 		</tr>

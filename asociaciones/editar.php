@@ -45,7 +45,7 @@ if(!isset($_GET['nombre_auspiciador']) || !isset($_GET['fecha_evento']) || !isse
 </head>
 <body>
 <?php include "../navbar.php"?>
-
+<div class="container">
 <h1>Editar Asociacion</h1>
 
 <p>Indique los nuevos datos de la Asociacion:
@@ -84,6 +84,7 @@ if(!isset($_GET['nombre_auspiciador']) || !isset($_GET['fecha_evento']) || !isse
 		<input type="submit" value="Enviar">
 	</p>
 </form>
+</div>
 </body>
 </html>
 <?php
