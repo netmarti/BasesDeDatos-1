@@ -19,25 +19,31 @@ foreach ($db->query($sql) as $participante)
 <body>
 <?php include "../navbar.php"?>
 <div class="container">
-<<<<<<< HEAD
-	<h3>Consulta</h3>
+
+	<h3>Consultas</h3>
 	<form method="post" action="no_participan.php" >
 		<p>
-			Participantes inscritos en eventos, pero que no compitieron: <input type="submit" value="Consultar" />
+			<h4>Participantes inscritos en eventos, pero que no compitieron: </h4>
+			 <input type="submit" value="Consultar" />
 		</p>
-		<form method="post" action="listar_motivados.php">
-			<p>
-				Cantidad de participaciones:<input type="text" name="participaciones" />
-			</p>
-			<p>
-				<input type="submit" value="Consultar" />
-			</p>
-		</form>
+
+
 	</form>
-=======
+
+	<br/>
+	<h4>Participantes que han participado en mas de n eventos</h4>
+	<form method="post" action="listar_motivados.php">
+		<p>
+			Cantidad de participaciones:<input type="text" name="participaciones" />
+		</p>
+		<p>
+			<input type="submit" value="Consultar" />
+		</p>
+	</form>
+
 	<h1>Participantes</h1>
 	<p>Listado de los participantes registrados hasta la fecha:</p>
->>>>>>> dbf47516110ab2c1d5c4cb728a5ac16a60de88aa
+
 	<table class="table">
 		<thead>
 		<tr>
