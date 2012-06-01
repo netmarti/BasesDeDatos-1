@@ -13,13 +13,13 @@
 		
 	}
 	
-	//Obtenemos los datos de la tabla eventos
-	$sql_evento = "SELECT * FROM evento;";
+	//Obtenemos los datos de la tabla producto
+	$sql_producto = "SELECT * FROM producto;";
 	
-	$eventos = array();
-	foreach($db->query($sql_evento) as $row){
+	$productos = array();
+	foreach($db->query($sql_producto) as $row){
 		
-		$eventos[] = $row;
+		$productos[] = $row;
 		
 	}
 	
@@ -34,11 +34,11 @@
 <!-- Formulario que crea una inscripcion nueva-->
 <html>
 	
-	<title>Creando una inscripcion</title>
+	<title>Creando una evaluacion</title>
 	
-	<h1>Crear inscripcion</h1>
+	<h1>Crear evaluacion</h1>
 
-	<p>Ingrese los datos de la nueva inscripcion</p>
+	<p>Ingrese los datos de la nueva evaluacion</p>
 	
 	<form method='post' action="crear_data.php">
 	<h3>Datos:</h3>
@@ -58,26 +58,16 @@
 			</select>
 		</p>
 		
-		<p>Categoria: 
-			<select name="categoria">
-				<option value="juvenil">Juvenil</option>
-				<option value="adulto">Adulto</option>
-				<option value="senior">Senior</option>				
-			</select>
-		</p>
-		
-		<p> Evento:
-			<select name="evento">
+		<p> Producto:
+			<select name="producto">
 				<?php
-					//para cada evento agregamos una opcion
-					foreach($eventos as $evento){
-						$fecha = $evento['fecha'];
-						$pais = $evento['pais'];
-						$ciudad	= $evento['ciudad'];
-						$calle = $evento['calle'];
+					//para cada producto agregamos una opcion
+					foreach($productos as $producto){
+						$modelo = $producto['modelo'];
+
 				?>
-				<option value="<?php echo $fecha ?>#<?php echo $pais ?>#<?php echo $ciudad ?>#<?php echo $calle?>">
-					<?php echo $fecha ?>  <?php echo $pais ?>  <?php echo $ciudad ?> <?php echo $calle?>
+				<option value="<?php echo $modelo ?>">
+					<?php echo $modelo ?>
 				</option>
 				
 				<?php
@@ -86,6 +76,23 @@
 			</select>
 		</p>
 		
+		<p>Nota: 
+			<select name="nota">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>			
+			</select>
+		</p>
+		
+		<p>Descripcion:</p>
+		<p>
+			<textarea name="descripcion" rows="6" cols = "30"></textarea>
+		</p>
+		<br />
 		<input type="submit" value="Crear" />
 		
 	</form>
