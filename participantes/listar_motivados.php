@@ -8,7 +8,7 @@ $sql = "SELECT p.*, e.email
 FROM participante p, email e
 WHERE(SELECT COUNT(*)
 FROM resultados_eventos r
-WHERE r.rut = p.rut) > '$participaciones'
+WHERE r.rut = p.rut) >= '$participaciones'
 AND p.rut = e.rut
 AND p.nacionalidad = e.nacionalidad;";
 
@@ -22,10 +22,13 @@ foreach ($db->query($sql) as $participante)
 
 <html>
 <head>
-
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <body>
-	<table>
+	<?php include "../navbar.php"?>
+	<div class="container">
+	<h2>Lista de los participantes que han participado en más de <?php echo $participaciones?> eventos</h2><br />
+	<table class="table">
 		<tr>
 			<th>Nombres</th>
 			<th>Ap. Paterno</th>
@@ -42,17 +45,13 @@ foreach ($db->query($sql) as $participante)
 			<td><?php echo $participante['rut'] ?></td>
 			<td><?php echo $participante['nacionalidad'] ?></td>
 			<td><?php echo $participante['email'] ?></td>
-			<td><a
-				href="editar.php?rut=<?php echo $participante['rut']?>&nacionalidad=<?php echo $participante['nacionalidad']?>">Editar</a>
-				</br> <a
-				href="eliminar_data.php?rut=<?php echo $participante['rut']?>&nacionalidad=<?php echo $participante['nacionalidad']?>">Eliminar</a>
-			</td>
+			
 		</tr>
 		<?php } ?>
 	</table>
 	<br />
 	<a href="listar.php">Volver a la lista de participantes</a>
-
+	</div>
 <body>
 
 </html>

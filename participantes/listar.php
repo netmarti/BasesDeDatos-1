@@ -48,6 +48,7 @@ foreach ($db->query($sql) as $participante)
 	</table>
 	<br />
 	<a href="crear.php">Crear un nuevo participante</a>
+	<br />
 	<p>
 		<h3>Consultas</h3>
 		<form method="post" action="listar_motivados.php">
