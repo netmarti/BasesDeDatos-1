@@ -57,7 +57,7 @@ foreach ($db->query($sql) as $evento)
 	<a href="crear.php">Crear un nuevo evento</a>
 	<br />
 	<p>
-		<h3>Consultas</h3>
+		<h3>Consulta Ganadores de cada carrera</h3>
 		<form method="post" action="ganadores.php">
 			<p>
 				Cantidad de ganadores:<input type="text" name="cantidad" />
@@ -66,8 +66,18 @@ foreach ($db->query($sql) as $evento)
 				<input type="submit" value="Consultar" />
 			</p>
 		</form>
+		<br />
+		<h3>Consulta carreras con mas de n inscritos</h3>
+		<form method="post" action="populares.php">
+			<p>
+				Cantidad de inscritos: <input type="text" name="cantidad" />
+			</p>
+			<p>
+				<input type="submit" name="Consultar" />
+			</p>
+		</form>
 	</p>
-	
+
 
 </div>
 <body>

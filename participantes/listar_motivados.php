@@ -29,7 +29,7 @@ foreach ($db->query($sql) as $participante)
 	<div class="container">
 	<h2>Lista de los participantes que han participado en más de <?php echo $participaciones?> eventos</h2><br />
 	<table class="table">
-		<tr>
+		<thead>
 			<th>Nombres</th>
 			<th>Ap. Paterno</th>
 			<th>Ap. Materno</th>
@@ -37,6 +37,9 @@ foreach ($db->query($sql) as $participante)
 			<th>Nacionalidad</th>
 			<th>Email</th>
 		</tr>
+		</thead>
+		<tr>
+		
 		<?php foreach($participantes as $participante){ ?>
 		<tr>
 			<td><?php echo $participante['nombres'] ?></td>
