@@ -1,6 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+
 </head>
 <body>
 <?php include "navbar.php"?>

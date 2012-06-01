@@ -27,6 +27,24 @@
 	<body>
 	<?php include "../navbar.php"?>
 	<div class="container">
+		<h1>Encuentra los ultimos resultados de un participante</h1>
+		<form method="post" action="ultimos_resultados_participante.php">
+			<p> Participante: <select name="participante">
+				<?php
+					//para cada participante agregamos una opcion
+					foreach ($participantes as $participante) {
+						$rut = $participante['rut'];
+						$nacionalidad = $participante['nacionalidad'];
+				?>
+								
+				<option value="<?php echo $rut ?>#<?php echo $nacionalidad?>"><?php echo $rut ?> <?php echo $nacionalidad ?></option>
+				<?php
+					}
+				?>
+			</select>
+			</p>
+			<input type="submit" value="Buscar" />
+		</form>
 		<h1>Lista de todos los resultados</h1>
 		<table class="table">
 			<thead>
