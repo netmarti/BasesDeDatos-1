@@ -35,6 +35,7 @@
 	<title>Creando una oferta</title>
 	</head>
 	<?php include "../navbar.php"?>
+	<div class="container">
 	<h1>Crear oferta</h1>
 	
 	<p>Ingrese los datos de la nueva oferta</p>
@@ -83,4 +84,5 @@
 		<input type="submit" value="Crear" />
 		
 	</form>
+	<div class="container">
 </html>

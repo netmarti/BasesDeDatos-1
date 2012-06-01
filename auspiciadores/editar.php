@@ -40,6 +40,7 @@
 </head>
 <body>
 <?php include "../navbar.php"?>
+<div class="container">
 	<h1>Editar Auspiciador</h1>
 	<p>Indique los nuevos datos del Auspiciador:</p>
 	
@@ -57,6 +58,7 @@
 			<input type="submit" value="Editar" />
 		</p>
 	</form>
+</div>
 </body>
 </html>
 

@@ -68,6 +68,7 @@ if(!isset($_GET['fecha']) ||!isset($_GET['pais']) || !isset($_GET['ciudad']) || 
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <?php include "../navbar.php"?>
+<div class="container">
 <h1>Editar Evento</h1>
 
 <p>Indique los nuevos datos de los evento:
@@ -124,7 +125,7 @@ if(!isset($_GET['fecha']) ||!isset($_GET['pais']) || !isset($_GET['ciudad']) || 
 		<input type="submit" value="Enviar">
 	</p>
 </form>
-
+</div>
 </html>
 <?php
 	

@@ -7,6 +7,7 @@
 </head>
 <body>
 <?php include "../navbar.php"?>
+<div class="container">
 	<h1>Crear Producto</h1>
 
 	<p>Ingrese los datos del nuevo producto:<p>
@@ -17,5 +18,6 @@
 		<p>Modelo: <input type="text" name="modelo" /></p>
 		<p><input type="submit" value="Ingresar" /></p>
 	</form>
+	</div>
 </body>
 </html>

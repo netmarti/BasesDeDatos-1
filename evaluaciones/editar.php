@@ -42,7 +42,7 @@ if(!isset($_GET['rut']) || !isset($_GET['nacionalidad']) || !isset($_GET['modelo
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <?php include "../navbar.php"?>
-
+<div class="container">
 <h1>Editar Evaluacion</h1>
 
 <p>Indique los nuevos datos de la evaluacion:
@@ -91,7 +91,7 @@ if(!isset($_GET['rut']) || !isset($_GET['nacionalidad']) || !isset($_GET['modelo
 		<input type="submit" value="Enviar">
 	</p>
 </form>
-
+</div>
 </html>
 <?php
 	
