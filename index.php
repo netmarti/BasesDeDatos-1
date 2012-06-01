@@ -12,6 +12,8 @@
 	<br />
 	<a href="auspiciadores/listar.php">Auspiciadores</a>
 	<br />
+	<a href="asociaciones/listar.php">Asociaciones</a>
+	<br />
 	<a href="participantes/listar.php">Participantes</a>
 	<br />
 	<a href="inscripciones/listar.php">Inscripciones</a>
