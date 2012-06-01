@@ -39,6 +39,7 @@
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <?php include "../navbar.php"?>
+<div class="container">
 	<h1>Editar Producto</h1>
 	<p>Indique los nuevos datos del producto:</p>
 	
@@ -60,7 +61,7 @@
 			<input type="submit" value="Editar" />
 		</p>
 	</form>
-	
+	</div>
 </html>
 <?php
 

@@ -38,6 +38,7 @@
 	<title>Creando una inscripcion</title>
 	</head>
 	<?php include "../navbar.php"?>
+	<div class="container">
 	<h1>Crear inscripcion</h1>
 
 	<p>Ingrese los datos de la nueva inscripcion</p>
@@ -91,4 +92,5 @@
 		<input type="submit" value="Crear" />
 		
 	</form>
+	</div>
 </html>

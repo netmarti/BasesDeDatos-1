@@ -57,6 +57,6 @@ foreach ($db->query($sql) as $evento)
 	<a href="crear.php">Crear un nuevo evento</a>
 
 </div>
-<body>
+</body>
 
 </html>

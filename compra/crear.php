@@ -45,8 +45,9 @@
 		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 		<title>Creando una compra nueva</title>
 	</head>
+	<body>
 	<?php include "../navbar.php"?>
-
+	<div class="container">
 	<h1>Crear Compra</h1>
 	
 	<p>Ingrese los datos de la nueva compra</p>
@@ -112,4 +113,6 @@
 		<input type="submit" value="Crear" />
 		
 	</form>
+	</div>
+	</body>
 </html>

@@ -2,10 +2,12 @@
 
 <!-- Formulario que crea un evento -->
 <head>
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 <title>Creando un Evento</title>
 </head>
 <body>
 <?php include "../navbar.php"?>
+<div class="container">
 <h1>Crear Evento</h1>
 
 <p>Ingrese los datos del nuevo evento:
@@ -48,6 +50,7 @@
 		<input type="submit" value="Enviar">
 	</p>
 </form>
+</div>
 </body>
 </html>
 

@@ -39,7 +39,7 @@
 	</head>
 	<body>
 	<?php include "../navbar.php"?>
-
+	<div class="container">
 	<h1>Crear asociacion</h1>
 
 	<p>Ingrese los datos de la nueva asociacion</p>
@@ -87,5 +87,6 @@
 		<input type="submit" value="Crear" />
 		
 	</form>
+	</div>
 	</body>
 </html>

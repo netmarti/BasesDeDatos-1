@@ -6,6 +6,7 @@
 	<title>Creando un Participante</title>
 </head>
 <?php include "../navbar.php"?>
+<div class="container">
 <h1>Crear Participante</h1>
 
 <p>Ingrese los datos del nuevo participante:
@@ -62,5 +63,5 @@
 		<input type="submit" value="Enviar">
 	</p>
 </form>
-
+</div>
 </html>

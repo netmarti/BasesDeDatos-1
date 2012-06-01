@@ -48,7 +48,7 @@
 		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 		<title>Editando resultados</title>
 	</head>
-	
+	<div class="container">
 	<h1>Editar Resultado</h1>
 	<p>Indique los nuevos datos del resultado:</p>
 	
@@ -75,8 +75,8 @@
 		<p>
 			<input type="submit" value="Editar" />
 		</p>
-		
 	</form>
+	</div>
 </html>	
 		
 			

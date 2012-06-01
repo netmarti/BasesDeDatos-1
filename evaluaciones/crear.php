@@ -38,6 +38,7 @@
 		<title>Creando una evaluacion</title>
 	</head>
 	<?php include "../navbar.php"?>
+	<div class="container">
 	<h1>Crear evaluacion</h1>
 
 	<p>Ingrese los datos de la nueva evaluacion</p>
@@ -98,4 +99,5 @@
 		<input type="submit" value="Crear" />
 		
 	</form>
+	</div>
 </html>
