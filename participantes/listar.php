@@ -50,6 +50,18 @@ foreach ($db->query($sql) as $participante)
 	</table>
 	<br />
 	<a href="crear.php">Crear un nuevo participante</a>
+	<br />
+	<p>
+		<h3>Consultas</h3>
+		<form method="post" action="listar_motivados.php">
+			<p>
+				Cantidad de participaciones:<input type="text" name="participaciones" />
+			</p>
+			<p>
+				<input type="submit" value="Consultar" />
+			</p>
+		</form>
+	</p>
 </div>
 <body>
 

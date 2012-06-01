@@ -13,3 +13,4 @@ nbproject/private/
 .project
 .buildpath
 .settings/
+db_connect.php
