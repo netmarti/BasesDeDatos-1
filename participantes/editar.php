@@ -55,7 +55,9 @@ if(!isset($_GET['rut']) ||!isset($_GET['nacionalidad'])){
 <!-- Formulario que edita a un participante -->
 
 <html>
-
+<head>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+</head>
 <h1>Editar Participante</h1>
 
 <p>Indique los nuevos datos del participante:
@@ -64,7 +66,7 @@ if(!isset($_GET['rut']) ||!isset($_GET['nacionalidad'])){
 <p>
 
 
-<form method='post' action='editar_data.php'>
+<form class="well" method='post' action='editar_data.php'>
 	<input type="hidden" name="id_participante" value="<?php echo $rut ?>" />
 	<h3>Datos personales:</h3>
 	<p>

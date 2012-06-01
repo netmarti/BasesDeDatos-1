@@ -14,10 +14,11 @@ foreach ($db->query($sql) as $participante)
 
 <html>
 <head>
-
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <body>
-	<table>
+	<table class="table">
+		<thead>
 		<tr>
 			<th>Nombres</th>
 			<th>Ap. Paterno</th>
@@ -25,6 +26,8 @@ foreach ($db->query($sql) as $participante)
 			<th>RUT</th>
 			<th>Nacionalidad</th>
 		</tr>
+		</thead>
+		<tbody>
 		<?php foreach($participantes as $participante){ ?>
 		<tr>
 			<td><?php echo $participante['nombres'] ?></td>
@@ -39,6 +42,7 @@ foreach ($db->query($sql) as $participante)
 			</td>
 		</tr>
 		<?php } ?>
+		</tbody>
 	</table>
 	<br />
 	<a href="crear.php">Crear un nuevo participante</a>

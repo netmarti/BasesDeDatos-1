@@ -1,9 +1,10 @@
 <html>
 
 <!-- Formulario que crea un evento -->
-
+<head>
 <title>Creando un Evento</title>
-
+</head>
+<body>
 <h1>Crear Evento</h1>
 
 <p>Ingrese los datos del nuevo evento:
@@ -12,7 +13,7 @@
 <p>
 
 
-<form method='post' action='crear_data.php'>
+<form class="well" method='post' action='crear_data.php'>
 	<h3>Datos del evento:</h3>
 	<p>
 		Nombre: <input type="text" name="nombre" />
@@ -46,7 +47,7 @@
 		<input type="submit" value="Enviar">
 	</p>
 </form>
-
+</body>
 </html>
 
 

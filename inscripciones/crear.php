@@ -33,9 +33,10 @@
 
 <!-- Formulario que crea una inscripcion nueva-->
 <html>
-	
+	<head>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 	<title>Creando una inscripcion</title>
-	
+	</head>
 	<h1>Crear inscripcion</h1>
 
 	<p>Ingrese los datos de la nueva inscripcion</p>

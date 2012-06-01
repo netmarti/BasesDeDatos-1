@@ -41,7 +41,9 @@ if(!isset($_GET['rut_participante']) || !isset($_GET['nacionalidad']) || !isset(
 <!-- Formulario que edita a un evento -->
 
 <html>
-
+<head>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+</head>
 <h1>Editar Inscripcion</h1>
 
 <p>Indique los nuevos datos de la inscripcion:
@@ -50,7 +52,7 @@ if(!isset($_GET['rut_participante']) || !isset($_GET['nacionalidad']) || !isset(
 <p>
 
 
-<form method='post' action='editar_data.php'>
+<form class="well" method='post' action='editar_data.php'>
 	<input type="hidden" name="id_fabricante" value="<?php echo $fecha_evento ?>" />
 	<h3>Datos del evento:</h3>
 	<p>

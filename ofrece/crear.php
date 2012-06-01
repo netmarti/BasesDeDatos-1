@@ -30,14 +30,15 @@
 
 <!-- Formulario que crea una oferta nueva-->
 <html>
-	
+	<head>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 	<title>Creando una oferta</title>
-	
+	</head>
 	<h1>Crear oferta</h1>
 	
 	<p>Ingrese los datos de la nueva oferta</p>
 	
-	<form method='post' action="crear_data.php">
+	<form class="well" method='post' action="crear_data.php">
 		<h3>Datos:</h3>
 		<p>Stock: <input type="text" name="stock" /></p>
 		<p>Precio: <input type="text" name="precio" /></p>

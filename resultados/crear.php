@@ -33,14 +33,15 @@
 
 <!-- Formulario que crea un resultado nuevo-->
 <html>
-	
-	<title>Creando un resultado</title>
-	
+	<head>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+		<title>Creando un resultado</title>
+	</head>
 	<h1>Crear resultado</h1>
 	
 	<p>Ingrese los datos del nuevo resultado</p>
 	
-	<form method='post' action="crear_data.php">
+	<form class="well" method='post' action="crear_data.php">
 		<h3>Datos:</h3>
 		<p>Posicion: <input type="text" name="posicion" /></p>
 		<p>Horas: <input type="text" name="horas" /></p>

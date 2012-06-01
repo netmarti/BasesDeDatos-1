@@ -17,6 +17,7 @@
 
 <html>
 	<head>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 		<title>
 			Compras
 		</title>
@@ -24,7 +25,8 @@
 	
 	<body>
 		<h1>Lista de todos las Compras</h1>
-		<table border = '1' cellpadding= '15'>
+		<table class="table">
+			<thead>
 			<tr>
 				<th>Rut</th>
 				<th>Nacionalidad</th>
@@ -33,6 +35,8 @@
 				<th>Fecha_compra</th>
 				<th>Cantidad</th>
 			</tr>
+			</thead>
+			<tbody>
 			<?php foreach($compras as $compra){
 				?>
 			<tr>
@@ -60,6 +64,7 @@
 				</td>
 			</tr>
 			<?php } ?> 
+			</tbody>
 		</table>
 		<br />
 		

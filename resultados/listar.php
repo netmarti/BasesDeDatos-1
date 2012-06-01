@@ -18,6 +18,7 @@
 
 <html>
 	<head>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 		<title>
 			Resultados
 		</title>
@@ -25,13 +26,16 @@
 	
 	<body>
 		<h1>Lista de todos los resultados</h1>
-		<table border = '1' cellpadding= '15'>
+		<table class="table">
+			<thead>
 			<tr>
 				<th>Posicion</th>
 				<th>Tiempo</th>
 				<th>Rut participante</th>
 				<th>Fecha evento</th>
 			</tr>
+			</thead>
+			<tbody>
 			<?php foreach($resultados as $resultado){
 				?>
 			<tr>
@@ -54,7 +58,8 @@
 											&calle=<?php echo $resultado['calle']?>">Editar</a>
 				</td>
 			</tr>
-			<?php } ?> 
+			<?php } ?>
+			</tbody> 
 		</table>
 		<br />
 		

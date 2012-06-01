@@ -14,12 +14,13 @@ foreach ($db->query($sql) as $evaluacion)
 
 <html>
 <head>
-
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <body>
 	<h1>Evaluaciones</h1>
 	<p>Listado de las evaluaciones existentes hasta la fecha:</p>
-	<table>
+	<table class="table">
+		<thead>
 		<tr>
 			<th>Rut</th>
 			<th>Nacionalidad</th>
@@ -27,6 +28,8 @@ foreach ($db->query($sql) as $evaluacion)
 			<th>Nota</th>
 			<th>Descripcion</th>
 		</tr>
+		</thead>
+		<tbody>
 		<?php foreach($evaluaciones as $evaluacion){ ?>
 		<tr>
 			<td><?php echo $evaluacion['rut'] ?></td>
@@ -41,6 +44,7 @@ foreach ($db->query($sql) as $evaluacion)
 			</td>
 		</tr>
 		<?php } ?>
+		</tbody>
 	</table>
 	<br />
 	<a href="crear.php">Crear una nueva evaluacion</a>

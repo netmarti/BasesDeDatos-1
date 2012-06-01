@@ -38,7 +38,9 @@ if(!isset($_GET['rut']) || !isset($_GET['nacionalidad']) || !isset($_GET['modelo
 <!-- Formulario que edita a un evento -->
 
 <html>
-
+<head>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+</head>
 <h1>Editar Evaluacion</h1>
 
 <p>Indique los nuevos datos de la evaluacion:
@@ -47,7 +49,7 @@ if(!isset($_GET['rut']) || !isset($_GET['nacionalidad']) || !isset($_GET['modelo
 <p>
 
 
-<form method='post' action='editar_data.php'>
+<form class="well" method='post' action='editar_data.php'>
 	<input type="hidden" name="rut" value="<?php echo $rut ?>" />
 	<input type="hidden" name="nacionalidad" value="<?php echo $nacionalidad ?>" />
 	<input type="hidden" name="modelo" value="<?php echo $modelo ?>" />

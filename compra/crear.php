@@ -41,14 +41,15 @@
 
 <!-- Formulario que crea una compra nueva-->
 <html>
-	
-	<title>Creando una compra nueva</title>
-	
+	<head>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+		<title>Creando una compra nueva</title>
+	</head>
 	<h1>Crear Compra</h1>
 	
 	<p>Ingrese los datos de la nueva compra</p>
 	
-	<form method='post' action="crear_data.php">
+	<form class="well" method='post' action="crear_data.php">
 		<h3>Datos:</h3>
 		
 		

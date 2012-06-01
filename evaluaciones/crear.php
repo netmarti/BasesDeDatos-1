@@ -33,14 +33,15 @@
 
 <!-- Formulario que crea una inscripcion nueva-->
 <html>
-	
-	<title>Creando una evaluacion</title>
-	
+	<head>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+		<title>Creando una evaluacion</title>
+	</head>
 	<h1>Crear evaluacion</h1>
 
 	<p>Ingrese los datos de la nueva evaluacion</p>
 	
-	<form method='post' action="crear_data.php">
+	<form class="well" method='post' action="crear_data.php">
 	<h3>Datos:</h3>
 		<p> Participante: 
 			<select name="participante">

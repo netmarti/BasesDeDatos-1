@@ -41,13 +41,14 @@
 		
 <html>
 	<head>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 		<title>Editando una oferta</title>
 	</head>
 	
 	<h1>Editar Oferta</h1>
 	<p>Indique los nuevos datos de la oferta:</p>
 	
-	<form method="post" action="editar_data.php">
+	<form class="well" method="post" action="editar_data.php">
 		<input type="hidden" name="modelo" value="<?php echo $modelo ?>" />
 		<input type="hidden" name="pais" value="<?php echo $pais ?>" />
 		<input type="hidden" name="ciudad" value="<?php echo $ciudad ?>" />

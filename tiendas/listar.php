@@ -14,16 +14,20 @@ foreach ($db->query($sql) as $tienda)
 
 <html>
 <head>
-
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <body>
-	<table>
+<?php include "../navbar.php"?>
+	<table class="table">
+		<thead>
 		<tr>
 			<th>Nombres</th>
 			<th>Calle</th>
 			<th>Ciudad</th>
 			<th>Pais</th>
 		</tr>
+		</thead>
+		<tbody>
 		<?php foreach($tiendas as $tienda){ ?>
 		<tr>
 			<td><?php echo $tienda['nombre'] ?></td>
@@ -33,10 +37,11 @@ foreach ($db->query($sql) as $tienda)
 			<td><a
 				href="editar.php?pais=<?php echo $tienda['pais']?>&ciudad=<?php echo $tienda['ciudad']?>&calle=<?php echo $tienda['calle']?>">Editar</a>
 				<br /> <a
-				href="eliminar_data.php?pais=<?php echo $tienda['pais']?>&ciudad=<?php echo $tienda['ciudad']?>&calle=<?php echo $tienda['calle']?>"">Eliminar</a>
+				href="eliminar_data.php?pais=<?php echo $tienda['pais']?>&ciudad=<?php echo $tienda['ciudad']?>&calle=<?php echo $tienda['calle']?>">Eliminar</a>
 			</td>
 		</tr>
 		<?php } ?>
+		</tbody>
 	</table>
 	<br />
 	<a href="crear.php">Crear una nueva tienda</a>
