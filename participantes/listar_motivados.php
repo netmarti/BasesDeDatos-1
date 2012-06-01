@@ -2,7 +2,15 @@
 
 include '../db_connect.php';
 
-$sql = 'SELECT * FROM participante;';
+$participaciones = $_POST['participaciones'];
+
+$sql = "SELECT p.*, e.email
+FROM participante p, email e
+WHERE(SELECT COUNT(*)
+FROM resultados_eventos r
+WHERE r.rut = p.rut) > '$participaciones'
+AND p.rut = e.rut
+AND p.nacionalidad = e.nacionalidad;";
 
 $participantes = array();
 foreach ($db->query($sql) as $participante)
@@ -24,6 +32,7 @@ foreach ($db->query($sql) as $participante)
 			<th>Ap. Materno</th>
 			<th>RUT</th>
 			<th>Nacionalidad</th>
+			<th>Email</th>
 		</tr>
 		<?php foreach($participantes as $participante){ ?>
 		<tr>
@@ -32,6 +41,7 @@ foreach ($db->query($sql) as $participante)
 			<td><?php echo $participante['ap_materno'] ?></td>
 			<td><?php echo $participante['rut'] ?></td>
 			<td><?php echo $participante['nacionalidad'] ?></td>
+			<td><?php echo $participante['email'] ?></td>
 			<td><a
 				href="editar.php?rut=<?php echo $participante['rut']?>&nacionalidad=<?php echo $participante['nacionalidad']?>">Editar</a>
 				</br> <a
@@ -41,19 +51,7 @@ foreach ($db->query($sql) as $participante)
 		<?php } ?>
 	</table>
 	<br />
-	<a href="crear.php">Crear un nuevo participante</a>
-	
-	<p>
-		<h3>Consultas</h3>
-		<form method="post" action="listar_motivados.php">
-			<p>
-				Cantidad de participaciones:<input type="text" name="participaciones" />
-			</p>
-			<p>
-				<input type="submit" value="Consultar" />
-			</p>
-		</form>
-	</p>
+	<a href="listar.php">Volver a la lista de participantes</a>
 
 <body>
 
