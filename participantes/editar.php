@@ -58,6 +58,7 @@ if(!isset($_GET['rut']) ||!isset($_GET['nacionalidad'])){
 <head>
 		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
+<?php include "../navbar.php"?>
 <h1>Editar Participante</h1>
 
 <p>Indique los nuevos datos del participante:

@@ -18,6 +18,7 @@ foreach ($db->query($sql) as $tienda)
 </head>
 <body>
 <?php include "../navbar.php"?>
+<div class="container">
 	<table class="table">
 		<thead>
 		<tr>
@@ -45,7 +46,7 @@ foreach ($db->query($sql) as $tienda)
 	</table>
 	<br />
 	<a href="crear.php">Crear una nueva tienda</a>
-
+</div>
 <body>
 
 </html>

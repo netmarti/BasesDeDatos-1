@@ -25,6 +25,8 @@
 	</head>
 	
 	<body>
+	<?php include "../navbar.php"?>
+	<div class="container">
 		<h1>Lista de todos los resultados</h1>
 		<table class="table">
 			<thead>
@@ -64,7 +66,7 @@
 		<br />
 		
 		<a href="crear.php">Agregar un nuevo resultado</a>
-
+	</div>
 	<body>	
 
 </html>

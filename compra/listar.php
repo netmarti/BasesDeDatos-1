@@ -24,6 +24,8 @@
 	</head>
 	
 	<body>
+	<?php include "../navbar.php"?>
+<div class="container">
 		<h1>Lista de todos las Compras</h1>
 		<table class="table">
 			<thead>
@@ -69,7 +71,7 @@
 		<br />
 		
 		<a href="crear.php">Agregar un nuevo compra</a>
-
+</div>
 	<body>	
 
 </html>

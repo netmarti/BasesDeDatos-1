@@ -45,6 +45,8 @@
 		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 		<title>Creando una compra nueva</title>
 	</head>
+	<?php include "../navbar.php"?>
+
 	<h1>Crear Compra</h1>
 	
 	<p>Ingrese los datos de la nueva compra</p>

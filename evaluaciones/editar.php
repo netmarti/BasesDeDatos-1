@@ -41,6 +41,8 @@ if(!isset($_GET['rut']) || !isset($_GET['nacionalidad']) || !isset($_GET['modelo
 <head>
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
+<?php include "../navbar.php"?>
+
 <h1>Editar Evaluacion</h1>
 
 <p>Indique los nuevos datos de la evaluacion:

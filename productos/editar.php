@@ -38,6 +38,7 @@
 <head>
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
+<?php include "../navbar.php"?>
 	<h1>Editar Producto</h1>
 	<p>Indique los nuevos datos del producto:</p>
 	

@@ -34,6 +34,7 @@
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 	<title>Creando una oferta</title>
 	</head>
+	<?php include "../navbar.php"?>
 	<h1>Crear oferta</h1>
 	
 	<p>Ingrese los datos de la nueva oferta</p>

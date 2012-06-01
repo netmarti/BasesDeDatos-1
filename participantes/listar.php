@@ -17,6 +17,8 @@ foreach ($db->query($sql) as $participante)
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <body>
+<?php include "../navbar.php"?>
+<div class="container">
 	<table class="table">
 		<thead>
 		<tr>
@@ -46,7 +48,7 @@ foreach ($db->query($sql) as $participante)
 	</table>
 	<br />
 	<a href="crear.php">Crear un nuevo participante</a>
-
+</div>
 <body>
 
 </html>

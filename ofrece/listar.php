@@ -22,6 +22,8 @@
 	</head>
 	
 	<body>
+	<?php include "../navbar.php"?>
+	<div class="container">
 		<h1>Productos ofrecidos segun tienda</h1>
 		<table class="table">
 			<thead>
@@ -62,7 +64,7 @@
 		<br />
 		<a href="crear.php">Crear una nueva oferta</a>
 		
-		
+		</div>
 	</body>
 	
 </html>

@@ -3,6 +3,7 @@
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 	<title>Creando Auspiciador</title>
 </head>
+<?php include "../navbar.php"?>
 <!-- Formulario que crea un auspiciador -->
 	<h1>Crear Auspiciador</h1>
 

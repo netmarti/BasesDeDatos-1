@@ -5,6 +5,8 @@
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 	<title>Creando producto</title>
 </head>
+<body>
+<?php include "../navbar.php"?>
 	<h1>Crear Producto</h1>
 
 	<p>Ingrese los datos del nuevo producto:<p>
@@ -15,5 +17,5 @@
 		<p>Modelo: <input type="text" name="modelo" /></p>
 		<p><input type="submit" value="Ingresar" /></p>
 	</form>
-
+</body>
 </html>

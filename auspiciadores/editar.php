@@ -39,6 +39,7 @@
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">	
 </head>
 <body>
+<?php include "../navbar.php"?>
 	<h1>Editar Auspiciador</h1>
 	<p>Indique los nuevos datos del Auspiciador:</p>
 	

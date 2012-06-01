@@ -51,6 +51,7 @@
 		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 		<title>Editando compras</title>
 	</head>
+	<?php include "../navbar.php"?>
 	
 	<h1>Editar Compra</h1>
 	<p>Indique los nuevos datos de la compra:</p>

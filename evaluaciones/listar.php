@@ -17,6 +17,8 @@ foreach ($db->query($sql) as $evaluacion)
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <body>
+<?php include "../navbar.php"?>
+<div class="container">
 	<h1>Evaluaciones</h1>
 	<p>Listado de las evaluaciones existentes hasta la fecha:</p>
 	<table class="table">
@@ -49,7 +51,7 @@ foreach ($db->query($sql) as $evaluacion)
 	<br />
 	<a href="crear.php">Crear una nueva evaluacion</a>
 
-
+</div>
 <body>
 
 </html>

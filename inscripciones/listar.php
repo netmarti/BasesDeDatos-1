@@ -17,6 +17,8 @@ foreach ($db->query($sql) as $inscripcion)
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <body>
+<?php include "../navbar.php"?>
+<div class="container">
 	<h1>Inscripciones</h1>
 	<p>Listado de las inscripciones existentes hasta la fecha:</p>
 	<table class="table">
@@ -55,7 +57,7 @@ foreach ($db->query($sql) as $inscripcion)
 	<br />
 	<a href="crear.php">Crear una nueva inscripcion</a>
 
-
+</div>
 <body>
 
 </html>

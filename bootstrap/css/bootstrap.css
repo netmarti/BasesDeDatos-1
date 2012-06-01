@@ -20,7 +20,9 @@ nav,
 section {
   display: block;
 }
-
+body {
+	padding-top: 65px;
+}
 audio,
 canvas,
 video {

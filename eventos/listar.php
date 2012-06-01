@@ -17,6 +17,8 @@ foreach ($db->query($sql) as $evento)
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <body>
+<?php include "../navbar.php"?>
+<div class="container">
 	<h1>Eventos</h1>
 	<p>Listado de los eventos existentes hasta la fecha:</p>
 	<table class="table">
@@ -54,7 +56,7 @@ foreach ($db->query($sql) as $evento)
 	<br />
 	<a href="crear.php">Crear un nuevo evento</a>
 
-
+</div>
 <body>
 
 </html>

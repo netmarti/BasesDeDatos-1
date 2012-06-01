@@ -23,6 +23,8 @@
 	</head>
 
 	<body>
+	<?php include "../navbar.php"?>
+	<div class="container">
 		<h1>Lista de todos los productos</h1>
 
 
@@ -49,5 +51,6 @@
 		</table>
 		<br />
 		<p><a href='crear.php'>Ingresar nuevo producto</a></p>
+	</div>
 	<body>
 </html>

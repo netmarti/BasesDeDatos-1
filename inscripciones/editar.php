@@ -44,6 +44,7 @@ if(!isset($_GET['rut_participante']) || !isset($_GET['nacionalidad']) || !isset(
 <head>
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
+<?php include "../navbar.php"?>
 <h1>Editar Inscripcion</h1>
 
 <p>Indique los nuevos datos de la inscripcion:

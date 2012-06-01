@@ -5,6 +5,7 @@
 <title>Creando un Evento</title>
 </head>
 <body>
+<?php include "../navbar.php"?>
 <h1>Crear Evento</h1>
 
 <p>Ingrese los datos del nuevo evento:

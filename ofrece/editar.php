@@ -44,7 +44,7 @@
 		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 		<title>Editando una oferta</title>
 	</head>
-	
+	<?php include "../navbar.php"?>
 	<h1>Editar Oferta</h1>
 	<p>Indique los nuevos datos de la oferta:</p>
 	

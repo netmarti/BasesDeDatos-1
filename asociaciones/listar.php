@@ -17,6 +17,8 @@ foreach ($db->query($sql) as $asociacion)
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <body>
+<?php include "../navbar.php"?>
+<div class="container">
 	<h1>Asociaciones</h1>
 	<p>Listado de las asociaciones existentes hasta la fecha:</p>
 	<table class="table">
@@ -52,7 +54,7 @@ foreach ($db->query($sql) as $asociacion)
 	<br />
 	<a href="crear.php">Crear una nueva asociacion</a>
 
-
+</div>
 <body>
 
 </html>

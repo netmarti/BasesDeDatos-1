@@ -44,6 +44,8 @@ if(!isset($_GET['nombre_auspiciador']) || !isset($_GET['fecha_evento']) || !isse
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <body>
+<?php include "../navbar.php"?>
+
 <h1>Editar Asociacion</h1>
 
 <p>Indique los nuevos datos de la Asociacion:

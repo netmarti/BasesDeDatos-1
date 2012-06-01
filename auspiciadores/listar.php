@@ -22,6 +22,8 @@
 	</head>
 	
 	<body>
+	<?php include "../navbar.php"?>
+	<div class="container">
 		<h1>Lista de todos los auspiciadores</h1>
 		
 		<table class="table" >
@@ -45,7 +47,7 @@
 		</table>
 		<br />
 		<p><a href='crear.php'>Ingresar nuevo auspiciador</a></p>
-
+	</div>
 	<body>
 
 </html>

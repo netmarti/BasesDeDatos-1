@@ -38,6 +38,8 @@
 		<title>Creando una asociacion</title>
 	</head>
 	<body>
+	<?php include "../navbar.php"?>
+
 	<h1>Crear asociacion</h1>
 
 	<p>Ingrese los datos de la nueva asociacion</p>

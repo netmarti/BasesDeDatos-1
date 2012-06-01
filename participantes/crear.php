@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 	<title>Creando un Participante</title>
 </head>
+<?php include "../navbar.php"?>
 <h1>Crear Participante</h1>
 
 <p>Ingrese los datos del nuevo participante:

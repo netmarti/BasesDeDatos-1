@@ -67,6 +67,7 @@ if(!isset($_GET['fecha']) ||!isset($_GET['pais']) || !isset($_GET['ciudad']) || 
 <head>
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
+<?php include "../navbar.php"?>
 <h1>Editar Evento</h1>
 
 <p>Indique los nuevos datos de los evento:
