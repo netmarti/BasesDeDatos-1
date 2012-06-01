@@ -1,0 +1,13 @@
+Las siguientes son las instrucciones para que la pagina quede funcionando correctamente
+
+1) Crear la base de datos a partir del archivo schema.sql
+
+2) Crear las vistas a partir de vistas.sql
+
+3) Crear los procedimientos almacenados a partir de procedimientos.sql
+
+4) Poblar la base utilizando data_14.sql
+
+Por ultimo colocar el archivo BasesDeDatos en el localhost del computador.
+Ese archivo es el rut el proyecto y además contiene todo lo necesario para el funcionamiento
+de la pagina
