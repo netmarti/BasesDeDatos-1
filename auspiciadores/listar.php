@@ -15,19 +15,25 @@
 
 <html>
 	<head>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 		<title>
 			Auspiciadores
 		</title>
 	</head>
 	
 	<body>
+	<?php include "../navbar.php"?>
+	<div class="container">
 		<h1>Lista de todos los auspiciadores</h1>
 		
-		<table border = '1' cellpadding= '15' >
+		<table class="table" >
+			<thead>
 			<tr>
 				<th>Nombre</th>
 				<th>Descripcion</th>
 			</tr>
+			</thead>
+			<tbody>
 			<?php foreach($auspiciadores as $aus){ ?>
 			<tr>
 				<td><?php echo $aus['nombre'] ?></td>
@@ -37,10 +43,11 @@
 				</td>
 			</tr>
 			<?php } ?>
+			</tbody>
 		</table>
 		<br />
 		<p><a href='crear.php'>Ingresar nuevo auspiciador</a></p>
-
+	</div>
 	<body>
 
 </html>

@@ -64,6 +64,10 @@ if(!isset($_GET['fecha']) ||!isset($_GET['pais']) || !isset($_GET['ciudad']) || 
 
 <html>
 
+<head>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+</head>
+<?php include "../navbar.php"?>
 <h1>Editar Evento</h1>
 
 <p>Indique los nuevos datos de los evento:
@@ -72,7 +76,7 @@ if(!isset($_GET['fecha']) ||!isset($_GET['pais']) || !isset($_GET['ciudad']) || 
 <p>
 
 
-<form method='post' action='editar_data.php'>
+<form class="well" method='post' action='editar_data.php'>
 	<input type="hidden" name="id_fabricante" value="<?php echo $fecha ?>" />
 	<h3>Datos del evento:</h3>
 	<p>

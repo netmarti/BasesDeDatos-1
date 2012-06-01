@@ -1,13 +1,11 @@
+<html>
+<head>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 
-<<<<<<< HEAD
-<?php include 'layout_above.php';?>
-<div>
-	<p> Esta es la pagina de inicio de Marrel SA, the greates mofos on earth.</p>
-</div>
-<?php include 'layout_bottom.php';?>
-=======
 </head>
 <body>
+<?php include "navbar.php"?>
+<div class="container-fluid">
 	<h1>Buena buena!</h1>
 	<a href="eventos/listar.php">Eventos</a>
 	<br />
@@ -17,6 +15,8 @@
 	<br />
 	<a href="auspiciadores/listar.php">Auspiciadores</a>
 	<br />
+	<a href="asociaciones/listar.php">Asociaciones</a>
+	<br />
 	<a href="participantes/listar.php">Participantes</a>
 	<br />
 	<a href="inscripciones/listar.php">Inscripciones</a>
@@ -24,8 +24,7 @@
 	<a href="productos/listar.php">Productos</a>
 	<br />
 	<a href="ofrece/listar.php">Productos ofrecidos por tienda</a>
-
+</div>
 <body>
 
 </html>
->>>>>>> a2dbbcbc6966fbf07f0bf27faeda333ce0fdc3c9

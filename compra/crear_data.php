@@ -5,6 +5,8 @@ include '../db_connect.php';
 
 //Extraemos los valores de la compra
 $cantidad = $_POST['cantidad'];
+
+
 $fecha = $_POST['fecha_compra'];
 
 //llave foranea participante
@@ -27,8 +29,19 @@ $calle = $aux[2];
 $modelo = $_POST['modelo'];
 
 //generamos la consulta
-$sql = "INSERT INTO compra VALUES ('$rut', '$nacionalidad', '$modelo', 
-				'$pais', '$ciudad', '$calle', '$fecha', '$cantidad');"; 
+
+if($_POST['fecha_compra'] == null || $_POST['fecha_compra'] == '' ){
+
+	//si la fecha no esta especificada agregamos la fecha actual	
+	$sql = "INSERT INTO compra VALUES ('$rut', '$nacionalidad', '$modelo', 
+				'$pais', '$ciudad', '$calle', CURRENT_TIMESTAMP, '$cantidad');"; 
+}
+else{
+	
+	$sql = "INSERT INTO compra VALUES ('$rut', '$nacionalidad', '$modelo', 
+				'$pais', '$ciudad', '$calle', '$fecha', '$cantidad');"; 			
+}
+
 
 //ejecutamos
 try

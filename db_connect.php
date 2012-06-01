@@ -7,5 +7,5 @@ catch(PDOException $e) {
 	die ('Problema al conectar a la base de datos!');
 }
 
-echo "Conectado a la base de datos! </br>";
+//echo "Conectado a la base de datos! </br>";
 ?>

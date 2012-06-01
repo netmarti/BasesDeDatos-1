@@ -14,12 +14,15 @@ foreach ($db->query($sql) as $evento)
 
 <html>
 <head>
-
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 </head>
 <body>
+<?php include "../navbar.php"?>
+<div class="container">
 	<h1>Eventos</h1>
 	<p>Listado de los eventos existentes hasta la fecha:</p>
-	<table>
+	<table class="table">
+		<thead>
 		<tr>
 			<th>Nombre</th>
 			<th>Tipo</th>
@@ -30,6 +33,8 @@ foreach ($db->query($sql) as $evento)
 			<th>Calle</th>
 			<th>Modificar</th>
 		</tr>
+		</thead>
+		<tbody>
 		<?php foreach($eventos as $evento){ ?>
 		<tr>
 			<td><?php echo $evento['nombre'] ?></td>
@@ -41,16 +46,17 @@ foreach ($db->query($sql) as $evento)
 			<td><?php echo $evento['calle'] ?></td>
 			<td><a
 				href="editar.php?fecha=<?php echo $evento['fecha']?>&pais=<?php echo $evento['pais']?>&ciudad=<?php echo $evento['ciudad']?>&calle=<?php echo $evento['calle']?>">Editar</a>
-				</br> <a
+				<br /> <a
 				href="eliminar_data.php?fecha=<?php echo $evento['fecha']?>&pais=<?php echo $evento['pais']?>&ciudad=<?php echo $evento['ciudad']?>&calle=<?php echo $evento['calle']?>">Eliminar</a>
 			</td>
 		</tr>
 		<?php } ?>
+		</tbody>
 	</table>
 	<br />
 	<a href="crear.php">Crear un nuevo evento</a>
 
-
+</div>
 <body>
 
 </html>

@@ -1,9 +1,11 @@
 <html>
 
 <!-- Formulario que crea un participante -->
-
-<title>Creando un Participante</title>
-
+<head>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+	<title>Creando un Participante</title>
+</head>
+<?php include "../navbar.php"?>
 <h1>Crear Participante</h1>
 
 <p>Ingrese los datos del nuevo participante:
@@ -12,7 +14,7 @@
 <p>
 
 
-<form method='post' action='crear_data.php'>
+<form class="well" method='post' action='crear_data.php'>
 	<h3>Datos personales:</h3>
 	<p>
 		Nombres: <input type="text" name="nombres" />

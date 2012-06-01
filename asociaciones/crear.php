@@ -4,12 +4,12 @@
 	include '../db_connect.php';
 	
 	//Buscamos los datos de la tabla participante
-	$sql_participante = "SELECT * FROM participante;";
+	$sql_auspiciador = "SELECT * FROM auspiciador;";
 	
-	$participantes = array();
-	foreach ($db->query($sql_participante) as $row) {
+	$auspiciadores = array();
+	foreach ($db->query($sql_auspiciador) as $row) {
 		
-		$participantes[] = $row;
+		$auspiciadores[] = $row;
 		
 	}
 	
@@ -34,37 +34,30 @@
 <!-- Formulario que crea una inscripcion nueva-->
 <html>
 	<head>
-	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
-	<title>Creando una inscripcion</title>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+		<title>Creando una asociacion</title>
 	</head>
+	<body>
 	<?php include "../navbar.php"?>
-	<h1>Crear inscripcion</h1>
 
-	<p>Ingrese los datos de la nueva inscripcion</p>
+	<h1>Crear asociacion</h1>
+
+	<p>Ingrese los datos de la nueva asociacion</p>
 	
-	<form method='post' action="crear_data.php">
+	<form class="well" method='post' action="crear_data.php">
 	<h3>Datos:</h3>
-		<p> Participante: 
-			<select name="participante">
+		<p> Auspiciador: 
+			<select name="auspiciador">
 				<?php
 					//para cada participante agregamos una opcion
-					foreach ($participantes as $participante) {
-						$rut = $participante['rut'];
-						$nacionalidad = $participante['nacionalidad'];
+					foreach ($auspiciadores as $auspiciador) {
+						$nombre = $auspiciador['nombre'];
 				?>
 				
-				<option value="<?php echo $rut ?>#<?php echo $nacionalidad?>"><?php echo $rut ?> <?php echo $nacionalidad ?></option>
+				<option value="<?php echo $nombre ?>"><?php echo $nombre ?></option>
 				<?php
 					}
 				?>
-			</select>
-		</p>
-		
-		<p>Categoria: 
-			<select name="categoria">
-				<option value="juvenil">Juvenil</option>
-				<option value="adulto">Adulto</option>
-				<option value="senior">Senior</option>				
 			</select>
 		</p>
 		
@@ -88,7 +81,11 @@
 			</select>
 		</p>
 		
+		<p> Monto:
+			<input type="text" name="monto" />
+		</p>
 		<input type="submit" value="Crear" />
 		
 	</form>
+	</body>
 </html>

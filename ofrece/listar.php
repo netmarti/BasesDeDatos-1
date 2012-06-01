@@ -17,12 +17,16 @@
 
 <html>
 	<head>
+		<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
 		<title>Ofertas de productos</title>
 	</head>
 	
 	<body>
+	<?php include "../navbar.php"?>
+	<div class="container">
 		<h1>Productos ofrecidos segun tienda</h1>
-		<table border='1' cellpadding="15">
+		<table class="table">
+			<thead>
 			<tr>
 				<th>Modelo</th>
 				<th>Pais</th>
@@ -31,6 +35,8 @@
 				<th>Stock</th>
 				<th>Precio</th>
 			</tr>
+			</thead>
+			<tbody>
 			<?php foreach($ofertas as $oferta){ ?>
 			<tr>
 				<td><?php echo $oferta['modelo'] ?></td>
@@ -53,11 +59,12 @@
 				</td>
 			</tr>
 			<?php } ?>
+			</tbody>
 		</table>
 		<br />
 		<a href="crear.php">Crear una nueva oferta</a>
 		
-		
+		</div>
 	</body>
 	
 </html>
