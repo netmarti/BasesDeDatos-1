@@ -51,6 +51,9 @@
 				?>
 			</select>
 			</p>
+			<p>
+			<input type="checkbox" name="formato" value="xml">En formato XML</input>
+			</p>
 			<input type="submit" value="Buscar" />
 		</form>
 		<h1>Lista de todos los resultados</h1>

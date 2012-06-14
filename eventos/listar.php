@@ -63,6 +63,9 @@ foreach ($db->query($sql) as $evento)
 				Cantidad de ganadores:<input type="text" name="cantidad" />
 			</p>
 			<p>
+			<input type="checkbox" name="formato" value="xml">En formato XML</input>
+			</p>
+			<p>
 				<input type="submit" value="Consultar" />
 			</p>
 		</form>
@@ -71,6 +74,9 @@ foreach ($db->query($sql) as $evento)
 		<form method="post" action="populares.php">
 			<p>
 				Cantidad de inscritos: <input type="text" name="cantidad" />
+			</p>
+			<p>
+			<input type="checkbox" name="formato" value="xml">En formato XML</input>
 			</p>
 			<p>
 				<input type="submit" name="Consultar" />
