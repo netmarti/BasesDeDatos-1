@@ -4,7 +4,7 @@ include '../db_connect.php';
 
 $formato = $_POST['formato'];
 
-$sql = 'select p.nombres, p.ap_paterno, p.ap_materno, i.*
+$sql = 'select p.nombres, p.ap_paterno, p.ap_materno, p.rut, i.*
 from participante as p, inscripcion as i
 where NOT EXISTS( SELECT *
 				  FROM resultado as r
