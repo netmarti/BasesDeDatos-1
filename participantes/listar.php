@@ -24,6 +24,9 @@ foreach ($db->query($sql) as $participante)
 	<form method="post" action="no_participan.php" >
 		<p>
 			<h4>Participantes inscritos en eventos, pero que no compitieron: </h4>
+			 <p>
+			<input type="checkbox" name="formato" value="xml">En formato XML</input>
+			</p>
 			 <input type="submit" value="Consultar" />
 		</p>
 
@@ -35,6 +38,9 @@ foreach ($db->query($sql) as $participante)
 	<form method="post" action="listar_motivados.php">
 		<p>
 			Cantidad de participaciones:<input type="text" name="participaciones" />
+		</p>
+		<p>
+			<input type="checkbox" name="formato" value="xml">En formato XML</input>
 		</p>
 		<p>
 			<input type="submit" value="Consultar" />

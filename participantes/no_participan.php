@@ -2,6 +2,8 @@
 
 include '../db_connect.php';
 
+$formato = $_POST['formato'];
+
 $sql = 'select p.nombres, p.ap_paterno, p.ap_materno, p.nacionalidad, p.rut
 from participante as p, inscripcion as i
 where NOT EXISTS( SELECT *
@@ -16,6 +18,7 @@ foreach ($db->query($sql) as $participante)
 	$participantes[] = $participante;
 }
 
+if($formato != "xml") {
 ?>
 
 <html>
@@ -52,3 +55,18 @@ foreach ($db->query($sql) as $participante)
 <body>
 
 </html>
+<?php 
+	} else {
+		//aqui va el XML !!
+		$elemento = new SimpleXMLElement("<tabla></tabla>");
+		foreach($participantes as $participante) {
+			$registro = $elemento->addChild("registro");
+			$registro->addChild("nombres",$participante['nombres']);
+			$registro->addChild("ap_paterno",$participante['ap_paterno']);
+			$registro->addChild("ap_materno",$participante['ap_materno']);
+			$registro->addChild("rut",$participante['rut']);
+			$registro->addChild("nacionalidad",$participante['nacionalidad']);	
+		}
+		echo $elemento->asXML();
+	}
+?>
