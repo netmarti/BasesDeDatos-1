@@ -3,6 +3,7 @@
 include '../db_connect.php';
 
 $cantidad = $_POST['cantidad'];
+$formato = $_POST['formato'];
 
 $sql = "select *from evento e where (select COUNT(*) 
 		from inscripcion as i  
@@ -15,6 +16,7 @@ foreach ($db->query($sql) as $evento)
 	$eventos[] = $evento;
 }
 
+if($formato != "xml") {
 ?>
 
 <html>
@@ -61,3 +63,20 @@ foreach ($db->query($sql) as $evento)
 <body>
 
 </html>
+<?php 
+} else {
+	//aqui va el XML !!
+	$elemento = new SimpleXMLElement("<tabla></tabla>");
+	foreach($eventos as $evento) {
+		$registro = $elemento->addChild("registro");
+		$registro->addChild("nombre",$evento['nombre']);
+		$registro->addChild("tipo_de_evento",$evento['tipo_de_evento']);
+		$registro->addChild("recaudacion",$evento['recaudacion']);
+		$registro->addChild("fecha",$evento['fecha']);
+		$registro->addChild("pais",$evento['pais']);
+		$registro->addChild("ciudad",$evento['ciudad']);
+		$registro->addChild("calle",$evento['calle']);
+	}
+	echo $elemento->asXML();
+}
+?>

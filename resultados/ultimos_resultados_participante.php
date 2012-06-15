@@ -4,7 +4,8 @@
 	include '../db_connect.php';
 	
 	$participante = $_POST['participante'];
-
+	$formato = $_POST['formato'];
+	
 	$aux = explode("#", $participante);
 	$rut = $aux[0];
 	$nacionalidad = $aux[1];
@@ -23,7 +24,7 @@
 		$resultados[] = $resultado;
 	}
 	
-
+	if($formato != "xml") {
 ?>
 
 <html>
@@ -54,7 +55,7 @@
 			<tr>
 				<td><?php echo $resultado['nombres_participante'] ?></td>
 				<td><?php echo $resultado['ap_paterno'] ?></td>
-				<td><?php echo $resultado['rut_participante'] ?></td>
+				<td><?php echo $resultado['rut'] ?></td>
 				<td><?php echo $resultado['posicion'] ?></td>
 				<td><?php echo $resultado['horas']?>:<?php echo $resultado['minutos']?>:<?php echo $resultado['segundos']?></td>
 				<td><?php echo $resultado['nombre_evento'] ?></td>
@@ -69,3 +70,20 @@
 	<body>	
 
 </html>
+<?php 
+	} else {
+		//aqui va el XML !!
+		$elemento = new SimpleXMLElement("<tabla></tabla>");
+		foreach($resultados as $resultado) {
+			$registro = $elemento->addChild("registro");
+			$registro->addChild("nombres_participante",$resultado['nombres_participante']);
+			$registro->addChild("ap_paterno",$resultado['ap_paterno']);
+			$registro->addChild("rut",$resultado['rut']);
+			$registro->addChild("posicion",$resultado['posicion']);
+			$registro->addChild("tiempo",$resultado['horas'].':'.$resultado['minutos'].':'.$resultado['segundos']);
+			$registro->addChild("nombre_evento",$resultado['nombre_evento']);
+			$registro->addChild("fecha_evento",$resultado['fecha_evento']);	
+		}
+		echo $elemento->asXML();
+	}
+?>

@@ -3,6 +3,7 @@
 include '../db_connect.php';
 
 $cantidad = $_POST['cantidad'];
+$formato = $_POST['formato'];
 
 $sql = "select p.*, e.nombre as nombre_evento, e.fecha as fecha_evento, r.posicion
 from participante p, resultado as r JOIN evento as e ON r.fecha_evento = e.fecha and r.pais = e.pais and r.calle = e.calle and r.ciudad = e.ciudad 
@@ -15,6 +16,7 @@ foreach ($db->query($sql) as $participante)
 	$participantes[] = $participante;
 }
 
+if($formato != "xml") {
 ?>
 
 <html>
@@ -59,3 +61,19 @@ foreach ($db->query($sql) as $participante)
 <body>
 
 </html>
+<?php 
+} else {
+	//aqui va el XML !!
+	$elemento = new SimpleXMLElement("<tabla></tabla>");
+	foreach($participantes as $participante) {
+		$registro = $elemento->addChild("registro");
+		$registro->addChild("nombres",$participante['nombres'].' '.$participante['ap_paterno']);
+		$registro->addChild("rut",$participante['rut']);
+		$registro->addChild("nacionalidad",$participante['nacionalidad']);
+		$registro->addChild("nombre_evento",$participante['nombre_evento']);
+		$registro->addChild("fecha_evento",$participante['fecha_evento']);
+		$registro->addChild("posicion",$participante['posicion']);
+	}
+	echo $elemento->asXML();
+}
+?>

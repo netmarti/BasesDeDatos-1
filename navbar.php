@@ -50,6 +50,9 @@
 			<ul class="nav">
 				<li><a href="/productos/listar.php">Productos</a></li>
 			</ul>
+			<ul class="nav">
+				<li><a href="/rss/feed.php"><img src="http://events.jiscinvolve.org/wp/files/2009/01/rssicon.png" alt=""/>RSS</a></li>
+			</ul>
 		</div>
 	</div>  
 </div>

@@ -2,13 +2,21 @@
 
 include '../db_connect.php';
 
-$sql = 'select p.nombres, p.ap_paterno, p.ap_materno, p.nacionalidad, p.rut
+$formato = $_POST['formato'];
+
+$sql = 'select p.nombres, p.ap_paterno, p.ap_materno, p.rut, i.*
 from participante as p, inscripcion as i
 where NOT EXISTS( SELECT *
 				  FROM resultado as r
-				  WHERE r.rut_participante = i.rut_participante AND r.nacionalidad_participante = i.nacionalidad)
-	AND p.rut = i.rut_participante 
-	AND p.nacionalidad = i.nacionalidad';
+				  WHERE r.rut_participante = i.rut_participante
+				  AND r.nacionalidad_participante = i.nacionalidad
+				  AND r.fecha_evento = i.fecha_evento
+				  AND r.pais = i.pais
+				  AND r.ciudad = i.ciudad
+				  AND r.calle = i.calle
+				  )
+	AND p.rut = i.rut_participante
+	AND p.nacionalidad = i.nacionalidad;';
 
 $participantes = array();
 foreach ($db->query($sql) as $participante)
@@ -16,6 +24,7 @@ foreach ($db->query($sql) as $participante)
 	$participantes[] = $participante;
 }
 
+if($formato != "xml") {
 ?>
 
 <html>
@@ -52,3 +61,18 @@ foreach ($db->query($sql) as $participante)
 <body>
 
 </html>
+<?php 
+	} else {
+		//aqui va el XML !!
+		$elemento = new SimpleXMLElement("<tabla></tabla>");
+		foreach($participantes as $participante) {
+			$registro = $elemento->addChild("registro");
+			$registro->addChild("nombres",$participante['nombres']);
+			$registro->addChild("ap_paterno",$participante['ap_paterno']);
+			$registro->addChild("ap_materno",$participante['ap_materno']);
+			$registro->addChild("rut",$participante['rut']);
+			$registro->addChild("nacionalidad",$participante['nacionalidad']);	
+		}
+		echo $elemento->asXML();
+	}
+?>
