@@ -12,7 +12,7 @@ FROM resultados_eventos r
 WHERE r.rut = p.rut) >= '$participaciones'
 AND p.rut = e.rut
 AND p.nacionalidad = e.nacionalidad;";
-
+include '../xml_log.php';
 $participantes = array();
 foreach ($db->query($sql) as $participante)
 {

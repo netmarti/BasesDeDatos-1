@@ -16,7 +16,8 @@ else{
 	
 	//Generamos las sentencias SQL
 	$sql_participante = "DELETE FROM participante WHERE rut = '$rut' AND nacionalidad = '$nacionalidad';";
-	
+	$sql = $sql_participante;
+	include 'xml_log.php';
 	//Estas se deberian borrar automaticamente por el ON DELETE CASCADE
 	//$sql_direccion = "DELETE FROM direccion WHERE rut = '$rut' AND nacionalidad = '$nacionalidad';";
 	//$sql_email = "DELETE FROM email WHERE rut = '$rut' AND nacionalidad = '$nacionalidad';";

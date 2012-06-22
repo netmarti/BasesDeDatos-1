@@ -17,7 +17,7 @@ where NOT EXISTS( SELECT *
 				  )
 	AND p.rut = i.rut_participante
 	AND p.nacionalidad = i.nacionalidad;';
-
+include '../xml_log.php';
 $participantes = array();
 foreach ($db->query($sql) as $participante)
 {

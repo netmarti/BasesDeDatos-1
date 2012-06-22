@@ -11,7 +11,8 @@ $pais = $_POST['pais'];
 
 //Generamos la consulta la insercion en tabla tienda
 $query_tienda = "INSERT INTO tienda VALUES ('$pais','$ciudad','$calle','$nombre');";
-
+$sql = $query_tienda;
+include 'xml_log.php';
 //die($query_juvenil);
 
 //Ejecutamos las consultas

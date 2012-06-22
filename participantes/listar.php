@@ -9,7 +9,7 @@ foreach ($db->query($sql) as $participante)
 {
 	$participantes[] = $participante;
 }
-
+include '../xml_log.php';
 ?>
 
 <html>

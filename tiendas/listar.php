@@ -9,7 +9,7 @@ foreach ($db->query($sql) as $tienda)
 {
 	$tiendas[] = $tienda;
 }
-
+include 'xml_log.php';
 ?>
 
 <html>

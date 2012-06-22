@@ -14,7 +14,8 @@ else{
 	$calle = $_GET['calle'];
 	//Generamos la consulta
 	$query = "DELETE FROM tienda WHERE pais = '$pais' AND ciudad = '$ciudad' AND calle = '$calle';";
-
+	$sql = $query;
+	include 'xml_log.php';
 	//La ejecutamos
 	$db->exec($query);
 

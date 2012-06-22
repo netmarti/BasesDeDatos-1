@@ -13,6 +13,8 @@ $calle = $_POST['calle'];
 $query_tienda = "UPDATE tienda SET nombre = '$nombre', ciudad = '$ciudad', pais = '$pais', calle = '$calle' WHERE ciudad = '$ciudad' AND pais = '$pais' AND calle = '$calle';";
 //die($query_tienda);
 //La ejecutamos
+$sql = $query_tienda;
+include 'xml_log.php';
 $db->exec($query_tienda);
 
 //Nos desconectamos de la base de datos

@@ -14,7 +14,8 @@ if(!isset($_GET['pais']) || !isset($_GET['ciudad']) || !isset($_GET['calle'])){
 	$calle = $_GET['calle'];
 	
 	$sql_tienda = "SELECT * FROM tienda WHERE pais = '$pais' AND ciudad = '$ciudad' AND calle = '$calle';";
-
+	$sql = $sql_tienda;
+	include 'xml_log.php';
 	//Extraemos los datos
 	
 	//die($sql_precio_juvenil);
